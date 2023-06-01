@@ -1,0 +1,366 @@
+body {
+  background-color: #d9faff;
+  /* height: 2500px; */
+.livePreview{
+  background-color: #00bbf0;
+}
+.livePreview:hover{
+  background-color:#d9faff;
+}
+}top-container{
+  height: 50%r;
+}
+.nav-bar{
+  color: #00bbf0;
+}
+.Name-Title {
+  text-align: center;
+  color: #00bbf0;
+  font-family: 'Merienda', cursive;
+
+}
+
+.Name-Title h1 {
+  font-size: 2.2rem;
+}
+
+.Name-Title p {
+  font-size: 2.5rem;
+}
+
+.Mountain-img {
+  width: 100%;
+  height: 350px;
+}
+.about-section{
+  background-color: white;
+  text-align: center;
+  margin: 0% 20% ;   
+}
+.about-section h1{
+  color: #00bbf0;
+  padding: 20px 0px 0px 20px;
+  
+}
+.about-description{
+  float: inline-end;
+}
+.about-section p{
+  text-align: unset;
+  
+}
+
+.App {
+  font-family: sans-serif;
+  font-weight:80;
+  font-size:1.5rem;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Merienda', cursive;
+  
+ 
+}
+.profile-img{
+ /* border-radius: 50%; */
+ max-width: 220%;
+ max-height: 220%;
+  margin: auto;
+  float: right;
+ /* background-color: #d9faff; */
+ 
+}
+.middle-container {
+  background-color: white;
+  height: auto; 
+}
+.career-section{
+  text-align: center;
+  color: #00bbf0;
+  margin: 5% 20%;
+}
+.skills-section{
+  background-color: #d9faff;
+  text-align: center;
+  
+}
+.skills-container{
+  /* background-color: #00bbf0; */
+  height: 70%;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 10%; 
+  
+}
+.a{
+  background-color:white;
+  
+
+}
+.skill-data{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 25px;
+  margin: 8%;
+}
+.dictionary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 4rem auto;
+  max-width: 90%;
+}
+.card {
+  text-align: center;
+  width: 30rem;
+  height: 20rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 100ms ease-in-out;
+}
+.card dd{
+  margin: auto;
+
+}
+.dictionary-top{
+  background-color: #00bbf0;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.project-section{
+ /* border: 5px solid black; */
+ text-align: center;
+ background-color: #fff;
+ 
+}
+.Project-dictionary{
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    max-width: 90%;
+  
+  
+
+}
+
+.project-card{
+  margin: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  /* border: 5px solid red; */
+  border-radius: 20px;
+  
+  width: 30rem; 
+  height: auto;
+  background-color: white;
+}
+.tech{
+  color: #757575;
+}
+.skill-column{
+  padding: 1.25rem;
+
+}
+.technologies{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2px;
+  /* border: 3px solid; */
+  
+
+}
+.skill-tags{
+  margin: 5px;
+  background-color: #00bbf0;
+}
+.card-img{
+  /* width: 100%; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  
+}
+.contactMe{
+  text-align: center;
+  align-items: center;
+  /* height: 750px; */
+  /* border: 5px solid blue; */
+  display: grid;
+  row-gap: 10%;
+  align-content: center;
+  justify-items: center;
+  
+ 
+  row-gap: 10%; 
+}
+.social-Media{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid black; */
+  width: 90%;
+  height: auto;
+
+}
+.box{
+  width: 90%;
+  height: 75px;
+  background-color:#fff;
+  /* border: 3px solid blue; */
+  margin: auto;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  
+}
+.footer-icon{
+  width: 50px;
+  height: 100%;
+  padding: 12px;
+  
+}
+
+
+.cloud1-img {
+  position: absolute;
+  left: 5%;
+  width: 25%;
+  animation-name: drifting-left;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes drifting-left {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 5%;
+  }
+}
+
+.cloud2-img {
+  position: absolute;
+  left: 50%;
+  /* bottom: 10%; */
+  width: 25%;
+  animation-name: drifting-right;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes drifting-right {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 60%;
+  }
+}
+
+@keyframes flying-plane {
+  0% {
+    top: 50%;
+    left: 100%;
+  }
+
+  20% {
+    top: 55%
+  }
+
+  40% {
+    top: 60%;
+    width: 3%;
+  }
+
+  80% {
+    top: 55%
+  }
+
+  100% {
+    top: 50%;
+    left: -1%;
+  }
+}
+
+.bird {
+  position: absolute;
+  left: -200px;
+  width: 4%;
+  animation-name: flying-plane;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes flying-plane2 {
+  0% {
+    top: 70%;
+    right: 100%;
+    opacity: 1;
+  }
+
+  20% {
+    top: 73%
+  }
+
+  40% {
+    top: 76%;
+    width: 3%;
+  }
+
+  70% {
+    top: 78%
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 68%;
+    right: 0%;
+    opacity: 0;
+  }
+}
+
+
+.bird2 {
+  position: absolute;
+  transform: scaleX(-1);
+  bottom: 200px;
+  width: 4%;
+  animation-name: flying-plane2;
+  animation-duration: 5s;
+  animation-delay: 10s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  opacity: 0;
+}
