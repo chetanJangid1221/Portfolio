@@ -1,45 +1,48 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Typewriter from 'typewriter-effect';
+import CountUp from "react-countup";
 
-{/* <Typewriter
-  options={{
-    strings: ['Hello', 'World'],
-    autoStart: true,
-    loop: true,
-  }}
-/> */}
 function MiddleContainer() {
+  const [experience, setExperience] = useState(0);
+
+  useEffect(() => {
+    function calculateExperience(joiningDate) {
+      const startDate = new Date(joiningDate);
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+      const totalExperience = (years + months / 12).toFixed(1);
+
+      return parseFloat(totalExperience);
+    }
+
+    setExperience(calculateExperience("2022-08-01")); // Set your actual joining date here
+  }, []);
+
   return (
     <div className="middle-container">
       <div className="about-section" id="gotoAbout">
 
-        <img className="profile-img" src={process.env.PUBLIC_URL + "/images/profile-photo.png"} alt="Profile photo" />
+        {/* <img className="profile-img" src={process.env.PUBLIC_URL + "/images/profile-photo.png"} alt="Profile photo" /> */}
 
         <div className="text-box" >
           <h1>About Me</h1>
-
-
-
           <p >
-            {/* I'm a Programmer Analyst Trainee at Cognizant,
-            passionate about programming and technology.
-            At Cognizant, I work with a team of experienced professionals to develop
-            cutting-edge software applications that enhance the user experience and
-            drive business growth. */}
-            Hi there, I'm Chetan Jangid a Programmer Analyst Trainee at Cognizant
+            Hi there! <strong>I'm Chetan Jangid</strong>, an <strong>Automation Test Engineer</strong> with <strong><CountUp start={0} end={experience} decimals={1} duration={5} /> of experience</strong>, currently working at <strong>Cognizant</strong>.
+            My expertise lies in <strong>UI and API automation</strong>, where I leverage <strong>Selenium</strong> for UI testing and <strong>Rest Assured</strong> for API automation.
 
-            I'm passionate about computer programming,
-            and I love developing new software applications that can make
-            a difference in people's lives. When I'm not at my computer,
-            you can find me hitting the open road on my motorbike,
-            exploring new destinations, and soaking up the beauty of nature.
+            I have hands-on experience with various testing frameworks, including <strong>Cucumber</strong>, <strong>TestNG</strong>, <strong>MSTest</strong>, and <strong>SpecFlow</strong>.
+            I primarily work with <strong>Java</strong> and <strong>C#</strong> for automation and have a basic understanding of <strong>React</strong> and <strong>Spring Boot</strong>.
 
-            {/* I have a deep appreciation for the natural world,
-            and I love spending time in nature, whether it's hiking,
-            camping, or simply taking a stroll through a park.
-            With a curious and adventurous spirit, I'm always looking
-            for new challenges and opportunities to learn and grow both
-            personally and professionally. */}
+            I am passionate about building <strong>efficient</strong>, <strong>scalable</strong>, and <strong>reliable test automation solutions</strong>.
+            Feel free to explore my work and <strong>connect with me</strong>!
           </p>
 
         </div>
@@ -57,12 +60,12 @@ function MiddleContainer() {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Aug 2022-Now</td>
+              <td scope="row">August 2022 - Present ({experience} years)</td>
               <td>Cognizant</td>
-              <td>Program Analyst Trainee</td>
+              <td>Automation Test Engineer (SDET)</td>
             </tr>
             <tr>
-              <td scope="row">Feb-May 2022</td>
+              <td scope="row">February2022 - May 2022</td>
               <td>Cognizant</td>
               <td>Internship</td>
             </tr>
@@ -71,78 +74,61 @@ function MiddleContainer() {
         </table>
       </div>
       <div className="skills-section" id="gotoSkills">
-        <h1>My Skills</h1>
+        <h1>My Skills & Certification</h1>
         <span>- An overview of my Technical Skills -</span>
 
         <dl className="dictionary">
           <div className="card">
             <dt>
               <div className="dictionary-top">
-                <h3>FrontEnd</h3>
+                <h3>Core Competencies</h3>
               </div>
             </dt>
             <dd>
-              <h6>HTML</h6>
-              <h6>CSS</h6>
-              <h6>JavaScript</h6>
-              <h6>React</h6>
-              <h6>Bootstrap</h6>
-              <h6>JQuery</h6>
-              <h6>OAuth</h6>
-              <h6>APIs</h6>
-              <h6>Git</h6>
+              <h6>Test Automation Frameworks</h6>
+              <h6>Web Application Automation</h6>
+              <h6>API Testing Automation</h6>
+              <h6>Agile & DevOps Methodologies</h6>
+              <h6>CI/CD Integration</h6>
+              <h6>Azure Cloud </h6>
             </dd>
           </div>
           <div className="card">
             <dt>
               <div className="dictionary-top">
-                <h3>BackEnd</h3>
+                <h3>Technical Skills</h3>
               </div>
             </dt>
             <dd>
-              <h6>NodeJS</h6>
-              <h6>Express</h6>
-              <h6>md5 Encryption</h6>
-              <h6>MySQL</h6>
-              <h6>MongoDB</h6>
-              <h6>Mongoose</h6>
-              <h6>RestAPI</h6>
-              <h6>Postman</h6>
-              <h6>Heroku</h6>
-
-
-            </dd>
-          </div>
-          <div className="card">
-            <dt>
-              <div className="dictionary-top">
-                <h3>Machine Learning</h3>
-              </div>
-            </dt>
-            <dd>
-              <h6>Python</h6>
-              <h6>OpenCV</h6>
-              <h6>TensorFlow</h6>
-              <h6>ANN</h6>
-              <h6>CNN</h6>
-              <h6>SVM</h6>
-            </dd>
-          </div>
-          <div className="card">
-            <dt>
-              <div className="dictionary-top">
-                <h3>Automation & Testing</h3>
-              </div>
-            </dt>
-            <dd>
+              <h6>Java & C#</h6>
               <h6>Selenium</h6>
-              <h6>Java</h6>
-              <h6>Tosca</h6>
-              <h6>Postman</h6>
-              <h6>Maven</h6>
+              <h6>Rest Assured</h6>
+              <h6>Rest Sharp</h6>
+              <h6>Cucumber</h6>
               <h6>TestNG</h6>
+              <h6>Page Object Model</h6>
+              <h6>React & Spring Boot</h6>
+              <h6>Git,Jenkins,AzureDevops</h6>
             </dd>
           </div>
+
+          <div className="card">
+            <dt>
+              <div className="dictionary-top">
+                <h3>Certification</h3>
+              </div>
+            </dt>
+            <dd>
+              <h6>Cognizant Certified Full Stack Automation Test Engineer </h6>
+              <h6>Microsoft Certified Azure Fundamentals AZ-900</h6>
+              <h6>Cognizant Certified Generative AI Associate</h6>
+              <h6>Udemy Certified Selenium Expert</h6>
+              <h6>Udemy Certified API Automation Tester</h6>
+              <h6>Udemy Certified Spring Boot Basic</h6>
+            </dd>
+          </div>
+
+
         </dl>
       </div>
       <div className="project-section" id="gotoProject">
@@ -191,7 +177,7 @@ function MiddleContainer() {
               </dt>
               <dd>Finding hospital is an automation project which is written in java by using Selenium
                 tool. Finding Hospital automate the practo health website and collect the information of nearby hospital
-                and provide to the use.This automation is also log the success and failure of application and generate a report on it </dd>
+                and provide to the user.This automation is also log the success and failure of application and generate a report on it </dd>
               <h5 className="tech">Technologies</h5>
               <div className="technologies">
                 <span className="badge rounded-pill skill-tags ">Java</span>
@@ -231,6 +217,7 @@ function MiddleContainer() {
               </div>
             </div>
           </div>
+          {/*           
           <div className="project-card">
             <img className="card-img" src={process.env.PUBLIC_URL + "/images/Daily-Journal-app.png"}></img>
             <div className="skill-column">
@@ -256,7 +243,9 @@ function MiddleContainer() {
               </div>
             </div>
           </div>
-          <div className="project-card">
+           */}
+
+          {/* <div className="project-card">
             <img className="card-img" src={process.env.PUBLIC_URL + "/images/todo-app.png"}></img>
             <div className="skill-column">
               <dt>
@@ -283,10 +272,10 @@ function MiddleContainer() {
               </div>
             </div>
           </div>
+ */}
 
 
-
-          <div className="project-card">
+          {/* <div className="project-card">
             <img className="card-img" src={process.env.PUBLIC_URL + "/images/Emoji-pedia-app.png"}></img>
             <div className="skill-column">
               <dt>
@@ -309,7 +298,7 @@ function MiddleContainer() {
                 <span className="badge rounded-pill skill-tags ">Render</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="project-card">
             <img className="card-img" src={process.env.PUBLIC_URL + "/images/keeper-app.png"}></img>
